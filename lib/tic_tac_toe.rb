@@ -60,7 +60,18 @@ class TicTacToe
     end
   end
   
-  
+  def won?(board)
+    game_win_combinations = WIN_COMBINATIONS.select do |win_combination|
+      win_combination.all? {|win_index| board[win_index] == "X"} ||
+      win_combination.all? {|win_index| board[win_index] == "O"}
+    end
+    if game_win_combinations == []
+      game_win_combinations = false
+    else
+      game_win_combinations.flatten!
+    end
+    game_win_combinations
+  end  
 end
 
 #binding.pry
