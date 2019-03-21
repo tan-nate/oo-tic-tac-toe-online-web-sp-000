@@ -78,6 +78,16 @@ class TicTacToe
       position_taken?(index)
     end
   end
+  
+  def draw?
+    if !won? && full?
+      true
+    else
+      false
+    end
+  end
+  
+  
 end
 
 #binding.pry
