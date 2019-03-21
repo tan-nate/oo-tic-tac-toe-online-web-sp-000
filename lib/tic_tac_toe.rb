@@ -1,5 +1,3 @@
-require 'pry'
-
 class TicTacToe
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
@@ -115,5 +113,3 @@ class TicTacToe
     end
   end
 end
-
-#binding.pry
