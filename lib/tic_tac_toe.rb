@@ -73,9 +73,9 @@ class TicTacToe
     game_win_combinations
   end
   
-  def full?(board)
+  def full?
     (0..8).to_a.all? do |index|
-      position_taken?(board, index)
+      position_taken?(index)
     end
   end
 end
