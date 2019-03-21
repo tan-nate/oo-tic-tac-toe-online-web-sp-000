@@ -71,7 +71,13 @@ class TicTacToe
       game_win_combinations.flatten!
     end
     game_win_combinations
-  end  
+  end
+  
+  def full?(board)
+    (0..8).to_a.all? do |index|
+      position_taken?(board, index)
+    end
+  end
 end
 
 #binding.pry
